@@ -75,6 +75,7 @@ button.btn{
   margin-right: 3rem;
   padding: 1rem 2rem;
   flex-direction: column;
+  z-index: 1;
 }
 .panelright> .img-div{
   width:35%;
@@ -97,6 +98,36 @@ button.btn{
   
 }
 
+.output{
+  margin-top:2rem;
+  
+}
+
+.overlay{
+  z-index: -9999;
+  width:40vw;
+  height: 90vh;
+  background: rgba(194, 102, 102,0.2);
+  position: absolute;
+  bottom:5%;
+  right:15%;
+  border-bottom-right-radius: 10%;
+  border-top-left-radius: 5%;
+}
+
+.jin{
+  width: 15%;
+  height: 25%;
+  position: absolute;
+  top:10%;
+  left:30%;
+  display: none;
+}
+
+.jin img{
+  width:100%;
+  height: 100%;
+}
 @media screen and (max-width:650px){
   .panelright{
     top:40%;
@@ -112,5 +143,14 @@ button.btn{
   }
   #inputOmen{
     width:100%;
+  }
+  .overlay{
+    height: 60%;
+    width: 80%;
+  }
+  .jin{
+    width:40%;
+    top:5%;
+    
   }
 }
