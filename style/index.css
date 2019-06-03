@@ -7,6 +7,7 @@ body{
   overflow: hidden;
   font-family: 'Montserrat';
   margin: 1rem 2rem;
+  
 }
 
 .header{
@@ -60,3 +61,56 @@ button.btn{
   }
 }
 /* mediaqueries under 650px for btn and header class---------------------- */
+
+.panelright{
+  background: none;
+  border:5px solid lightblue;
+  width:30%;
+  height: 70%;
+  position: absolute;
+  right:2%;
+  top:10%;
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+  padding: 1rem 2rem;
+  flex-direction: column;
+}
+.panelright> .img-div{
+  width:35%;
+  height: 35%;
+}
+
+.img-div img{
+  width:100%;
+  height: 100%;
+}
+
+#inputOmen{
+  height: 7%;
+  width:100%;
+  font-size:2rem;
+  border:2px solid lightblue;
+}
+#inputOmen:focus{
+  border:4px solid lightblue;
+  
+}
+
+@media screen and (max-width:650px){
+  .panelright{
+    top:40%;
+    left:50%;
+    transform: translateX(-50%);
+    height: 50%;
+    width:65%;
+  }
+  .header{
+    top:5%;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  #inputOmen{
+    width:100%;
+  }
+}
