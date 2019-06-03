@@ -5,12 +5,33 @@ body{
   padding:0;
   box-sizing: border-box;
   overflow: hidden;
+  font-family: 'Montserrat';
+  margin: 1rem 2rem;
 }
 
 .header{
-  width:30%;
-  height: 100%;
-  background: whitesmoke;
+  position: absolute;
+  top:30%;
+  width:40%;
   color:royalblue;
   text-transform: uppercase;
+}
+.header::after{
+  content: '';
+  display: block;
+  width:80%;
+  height: 2px;
+  background: lightcoral;
+}
+.header::before{
+  content: '';
+  display: block;
+  float:right;
+  width:80%;
+  height: 2px;
+  background: lightcoral;
+}
+.header h1{
+  font-size:3rem;
+  text-align: center;
 }
