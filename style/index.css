@@ -120,11 +120,11 @@ button.btn:hover{
 }
 /* overlay lightpink rbga------------------------- */
 .jin{
-  width: 15%;
-  height: 25%;
+  width: 35%;
+  height: 45%;
   position: absolute;
-  top:10%;
-  left:30%;
+  top:20%;
+  left:10%;
   display: none;
 }
 
@@ -168,7 +168,10 @@ button.btn:hover{
   }
   .jin{
     width:40%;
-    top:5%;
+    height: 25%;
+    left:50%;
+    transform: translateX(-50%);
+    top:3%;
   }
   .button{
     width:100%;
