@@ -120,8 +120,14 @@ button.btn:hover{
 
 .output{
   margin-top:1rem;
-  
+  font-size:1.3rem;
+  color:black;
+  background: grey;
+  padding:10px;
+  border-radius: 10px;
 }
+
+
 /* output omen----------------------------- */
 .overlay{
   z-index: -9999;
@@ -222,6 +228,27 @@ button.btn:hover{
 
 /* media queires under 650px--------------------------------- */
 
+.alert{
+  /* background: #ccc; */
+  border:2px solid lightblue;
+  width:25vw;
+  height: 25vw;
+  border-radius: 50%;
+  position: absolute;
+  top:20%;
+  left:1%;
+  font-size:15px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  opacity:0;
+}
+.alert.showInfo{
+  animation-name: showOverlay;
+  animation-duration: 2s;
+  opacity: 1;
+}
+/* alert div */
 
 @keyframes jinAnime{
   0%{

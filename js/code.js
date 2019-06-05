@@ -6,8 +6,10 @@ const jinDiv = document.querySelector('.jin');
 const rpanel = document.querySelector('.panelright');
 const overLay = document.querySelector('.overlay');
 const btnShow = document.querySelector('button.showOmen');
+const btnAdd = document.querySelector('button.addOmen');
 const output = document.querySelector('.output');
 const lamp = document.querySelector('.img-div');
+const info = document.querySelector('.alert');
 
 btnStart.addEventListener('click',() => {
   setTimeout(function(){
@@ -23,3 +25,9 @@ btnShow.addEventListener('click',() => {
   setTimeout(()=> output.innerHTML = 'Pierwsza wróżba!',1400);
   setTimeout(()=> lamp.classList.remove('run'),1400);
 });
+
+btnAdd.addEventListener('click',()=> {
+  
+  setTimeout(()=> info.classList.add('showInfo'),1000);
+  console.log('halo')
+})
