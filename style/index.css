@@ -63,6 +63,21 @@ button.btn:hover{
   button.btn{
     font-size: 2.5rem;
   }
+  .alert{
+    border:2px solid lightblue;
+    width:15vw;
+    height: 15vw;
+    border-radius: 50%;
+    position: absolute;
+    top:10%;
+    left:1%;
+    font-size:0.8rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity:0;
+  }
 }
 /* mediaqueries under 650px for btn and header class---------------------- */
 
@@ -224,29 +239,40 @@ button.btn:hover{
     animation-duration: 1s;
   }
 
+  
+  
 }
 
 /* media queires under 650px--------------------------------- */
-
+.alert.showInfo{
+  animation-name: showOverlay;
+  animation-duration: 2s;
+  opacity: 1;
+}
 .alert{
   /* background: #ccc; */
   border:2px solid lightblue;
-  width:25vw;
-  height: 25vw;
+  background: lightblue;
+  width:20vw;
+  height: 20vw;
   border-radius: 50%;
   position: absolute;
-  top:20%;
-  left:1%;
-  font-size:15px;
+  top:15%;
+  left:5%;
+  font-size:0.8rem;
+  font-weight: 500;
   display: flex;
   text-align: center;
   align-items: center;
   opacity:0;
 }
-.alert.showInfo{
-  animation-name: showOverlay;
-  animation-duration: 2s;
-  opacity: 1;
+
+@media screen and (min-width:650px){
+  .alert{
+    top:66%;
+    font-size:1.5rem;
+    text-align: center;
+  }
 }
 /* alert div */
 
