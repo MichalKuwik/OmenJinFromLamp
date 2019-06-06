@@ -9,10 +9,18 @@ body{
   margin: 1rem 2rem;
   
 }
-
+label{
+  font-size:0.8rem;
+  text-align: center;
+  margin-bottom:20px;
+  background: #fff;
+  color:lightcoral;
+  padding:10px;
+  border-radius: 10px;
+}
 .header{
   position: absolute;
-  top:40%;
+  top:30%;
   left:20%;
   width:60%;
   color:lightblue;
@@ -196,6 +204,25 @@ button.btn:hover{
   margin-top:1rem;
   
 }
+
+.infoCount{
+  border-radius: 50%;
+  width:13vw;
+  height: 13vw;
+  background: lightcoral;
+  color:#fff;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left:37%;
+  font-size: 0.7rem;
+  opacity:0;
+}
+.infoCount.showCount{
+  opacity: 1;
+}
 /* styles for buttons above output */
 @media screen and (max-width:650px){
   .panelright{
@@ -239,8 +266,13 @@ button.btn:hover{
     animation-duration: 1s;
   }
 
-  
-  
+  .infoCount{
+    left:70%;
+    width:23vw;
+    height: 23vw;
+    text-align: center;
+    font-size: 0.7rem;
+  }
 }
 
 /* media queires under 650px--------------------------------- */
