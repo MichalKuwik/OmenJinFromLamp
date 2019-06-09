@@ -29,17 +29,13 @@ btnShow.addEventListener('click',() => {
   const randomOmenShow = () => {
     //get single index
     const index = Math.floor(Math.random() * omenArray.length);
-    output.innerHTML = `${omenArray[index]}`;
+    output.innerHTML = `"${omenArray[index]}"`;
     let newValue = input.value;
     
   }
-
-  
   setTimeout(()=> lamp.classList.add('run'),10);
   setTimeout(randomOmenShow,1400);
   setTimeout(()=> lamp.classList.remove('run'),1400);
-
-  
 });
 
 //array with defalut omens at start

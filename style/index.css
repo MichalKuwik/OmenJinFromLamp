@@ -217,7 +217,7 @@ button.btn:hover{
   align-items: center;
   position: absolute;
   left:37%;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   opacity:0;
 }
 .infoCount.showCount{
