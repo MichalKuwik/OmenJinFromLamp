@@ -3,7 +3,8 @@
 body{
   margin:0;
   padding:0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   overflow: hidden;
   font-family: 'Montserrat';
   margin: 1rem 2rem;
@@ -25,9 +26,16 @@ label{
   width:60%;
   color:lightblue;
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 h1::after{
   content: '';
@@ -81,9 +89,15 @@ button.btn:hover{
     left:1%;
     font-size:0.8rem;
     font-weight: 700;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     opacity:0;
   }
 }
@@ -97,20 +111,31 @@ button.btn:hover{
   position: absolute;
   right:2%;
   top:10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 3rem;
   padding: 1rem 2rem;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   z-index: 1;
-  transform: translateY(130%);
+  -webkit-transform: translateY(130%);
+          transform: translateY(130%);
   
 }
 
 .panelright.click{
-  transform: translateY(0%);
-  animation-name: enterPanel;
-  animation-duration: 1s;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-animation-name: enterPanel;
+          animation-name: enterPanel;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   
 }
 .panelright> .img-div{
@@ -119,9 +144,12 @@ button.btn:hover{
 }
 
 .img-div.run{
-  animation-name:shake;
-  animation-delay: .1s;
-  animation-duration: 10s;
+  -webkit-animation-name:shake;
+          animation-name:shake;
+  -webkit-animation-delay: .1s;
+          animation-delay: .1s;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
 }
 
 .img-div img{
@@ -167,8 +195,10 @@ button.btn:hover{
 }
 
 .overlay.show{
-  animation-name: showOverlay;
-  animation-duration: 2s;
+  -webkit-animation-name: showOverlay;
+          animation-name: showOverlay;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   opacity: 1;
 }
 /* overlay lightpink rbga------------------------- */
@@ -179,9 +209,12 @@ button.btn:hover{
   top:20%;
   left:10%;
   display: none;
-  animation-name: jinAnime;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
+  -webkit-animation-name: jinAnime;
+          animation-name: jinAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .jin img{
@@ -212,9 +245,15 @@ button.btn:hover{
   background: lightcoral;
   color:#fff;
   font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
   left:37%;
   font-size: 0.8rem;
@@ -238,7 +277,8 @@ button.btn:hover{
   .header{
     top:25%;
     left:50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
   #inputOmen{
     width:100%;
@@ -261,9 +301,12 @@ button.btn:hover{
   
 
   .panelright.click{
-    transform: translateY(0%);
-    animation-name: enterPanel;
-    animation-duration: 1s;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-animation-name: enterPanel;
+            animation-name: enterPanel;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
   }
 
   .infoCount{
@@ -277,8 +320,10 @@ button.btn:hover{
 
 /* media queires under 650px--------------------------------- */
 .alert.showInfo{
-  animation-name: showOverlay;
-  animation-duration: 2s;
+  -webkit-animation-name: showOverlay;
+          animation-name: showOverlay;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   opacity: 1;
 }
 .alert{
@@ -293,9 +338,13 @@ button.btn:hover{
   left:5%;
   font-size:0.8rem;
   font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   opacity:0;
 }
 
@@ -308,33 +357,83 @@ button.btn:hover{
 }
 /* alert div */
 
-@keyframes jinAnime{
+@-webkit-keyframes jinAnime{
   0%{
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   50%{
-    transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
   }
   100%{
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes jinAnime{
+  0%{
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50%{
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+  }
+  100%{
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
 /* animation jinAnime*/
 
-@keyframes enterPanel{
+@-webkit-keyframes enterPanel{
   0%{
-    transform: translateY(130%);
+    -webkit-transform: translateY(130%);
+            transform: translateY(130%);
   }
   50%{
-    transform: translateY(-10%);
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
   }
   
   100%{
-    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes enterPanel{
+  0%{
+    -webkit-transform: translateY(130%);
+            transform: translateY(130%);
+  }
+  50%{
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  
+  100%{
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 /* animation enterpanel */
+
+@-webkit-keyframes showOverlay{
+  0%{
+    opacity:0;
+  }
+  50%{
+    opacity:0.5;
+  }
+  
+  100%{
+    opacity:1;
+  }
+}
 
 @keyframes showOverlay{
   0%{
@@ -349,40 +448,99 @@ button.btn:hover{
   }
 }
 
-@keyframes shake{
+@-webkit-keyframes shake{
   0%{
-      transform: translateX(0);
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
   }
  
   1%{
-      transform: translateX(20px);
+      -webkit-transform: translateX(20px);
+              transform: translateX(20px);
   }
   2%{
-      transform: translateX(-20px);
+      -webkit-transform: translateX(-20px);
+              transform: translateX(-20px);
   }
   3%{
-      transform: translateX(20px);
+      -webkit-transform: translateX(20px);
+              transform: translateX(20px);
   }
   4%{
-      transform: translateX(-20px);
+      -webkit-transform: translateX(-20px);
+              transform: translateX(-20px);
   }
   5%{
-      transform: translateX(20px);
+      -webkit-transform: translateX(20px);
+              transform: translateX(20px);
   }
   6%{
-      transform: translateX(-20px);
+      -webkit-transform: translateX(-20px);
+              transform: translateX(-20px);
   }
   7%{
-      transform: translateX(20px);
+      -webkit-transform: translateX(20px);
+              transform: translateX(20px);
   }
   8%{
-      transform: translateX(-20px);
+      -webkit-transform: translateX(-20px);
+              transform: translateX(-20px);
   }
   9%{
-      transform: translateX(20px);
+      -webkit-transform: translateX(20px);
+              transform: translateX(20px);
   }
   10%{
-      transform: translateX(0);
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+  }
+}
+
+@keyframes shake{
+  0%{
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+  }
+ 
+  1%{
+      -webkit-transform: translateX(20px);
+              transform: translateX(20px);
+  }
+  2%{
+      -webkit-transform: translateX(-20px);
+              transform: translateX(-20px);
+  }
+  3%{
+      -webkit-transform: translateX(20px);
+              transform: translateX(20px);
+  }
+  4%{
+      -webkit-transform: translateX(-20px);
+              transform: translateX(-20px);
+  }
+  5%{
+      -webkit-transform: translateX(20px);
+              transform: translateX(20px);
+  }
+  6%{
+      -webkit-transform: translateX(-20px);
+              transform: translateX(-20px);
+  }
+  7%{
+      -webkit-transform: translateX(20px);
+              transform: translateX(20px);
+  }
+  8%{
+      -webkit-transform: translateX(-20px);
+              transform: translateX(-20px);
+  }
+  9%{
+      -webkit-transform: translateX(20px);
+              transform: translateX(20px);
+  }
+  10%{
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
   }
 }
 /* anime lamp shake */
