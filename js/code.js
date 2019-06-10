@@ -57,7 +57,20 @@ btnAdd.addEventListener('click',()=> {
     // console.log(omenArray);
 
     let newValue = input.value;
-    
+    //if input value will be empty
+    if(newValue === ''){
+      input.style.border = '2px solid red';
+      input.classList.add('run');
+      info.innerHTML = "Nie można dodać pustej wróżby!";
+      
+      setTimeout(()=> {
+        input.style.border='2px solid lightblue';
+        input.classList.remove('run');
+      },1800);
+      
+    }else{
+      info.innerHTML = 'Dodano nową wróżbę';
+    }
     //push new omen to array
     if(input.value){
       omenArray.push(newValue);
